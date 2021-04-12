@@ -1,0 +1,61 @@
+{
+  "name": "@clearjs/mongoose",
+  "version": "0.0.1",
+  "description": "",
+  "eggPlugin": {
+    "name": "mongoose"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
+  "dependencies": {
+    "@types/mongoose": "^5.10.3",
+    "await-first": "^1.0.0",
+    "mongoose": "^5.11.12"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg": "^2.16.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles",
+    "autod": "autod"
+  },
+  "files": [
+    "app",
+    "config",
+    "agent.js",
+    "lib",
+    "app.js",
+    "test{{name}}.test.js"
+  ],
+  "ci": {
+    "version": "8, 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clearjs/clearjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iclearjs/clearjs/issues"
+  },
+  "homepage": "https://github.com/iclearjs/clearjs#readme",
+  "author": "",
+  "license": "MIT"
+}
