@@ -124,9 +124,9 @@ const GenerateSchemaAttributes = (collection, collectionFields, p_id, schemas) =
                 defaultJson['default'] = field.defaultValue;
                 defaultStr = `,default:'${field.defaultValue}'`
             }
-            if (field.enums) {
+            if (field.enums&&field.enums.length>0) {
                 defaultJson['enum'] = field.enums;
-                defaultStr = defaultStr+`,enum:'${field.enums}'`
+                defaultStr = defaultStr+(field.type!=='String'?`,enum:[${field.enums.join(',')}]`:`,enum:["${field.enums.join('","')}"]`)
             }
             switch (field.type) {
                 case 'File':
