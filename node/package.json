@@ -1,6 +1,6 @@
 {
   "name": "@clearjs/node",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "clearjs node server use",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "js-beautify": "^1.13.5",
+    "mongodb-client-encryption": "^1.2.3",
     "mongoose": "^5.12.3",
     "mongoose-deep-populate": "^3.2.0"
   },
